@@ -4,14 +4,14 @@ import { useHistory } from "react-router-dom";
 //import { ShopContext } from "../../contexts/ShoppingContext";
 import Navbar from "../navbar/Navbar";
 import SideBar from "../sidebar/SideBar";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 
 
 export default function CheckoutPage() {
     //const { cartProducts, setCartProducts } = useContext(ShopContext);
     const cartProducts= useSelector( (state)=> state);
-    const dispatch= useDispatch()
+    //const dispatch= useDispatch()//esslint-diable line 
 
     const history = useHistory();
 

@@ -6,7 +6,7 @@ import { decrease, increase } from "../../Redux/cart/cartAction";
 
 
 
-export default function ProductCardSidebar({ product: { id, title, image, price, rating: { rate }}, count }) {
+export default function ProductCardSidebar({ product: { id, title, image, price, rating: { rate}, count }}) {
     const cartProducts= useSelector( (state)=> state);
     const dispatch= useDispatch()
 

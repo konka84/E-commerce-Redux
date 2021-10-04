@@ -5,7 +5,7 @@ import { add, decrease, increase } from "../../Redux/cart/cartAction";
 
 
 
-export default function ProductCard({ product: { id, image, title, category, price, rating} }) {
+export default function ProductCard({ product: { id, image, title, category, price, rating, count} }) {
     //const {cartProducts, setCartProducts} = useContext(ShopContext );
     const cartProducts= useSelector( (state)=> state);
     const dispatch= useDispatch()
@@ -45,7 +45,7 @@ export default function ProductCard({ product: { id, image, title, category, pri
                            
                         </div>
                     ) : (
-                        <button onClick={() => dispatch(add({ id, image, title, category, price, rating}))} className="p-2 bg-purple-400 transition transform hover:scale-105 w-full rounded-lg font-semibold"><i className="fa fa-cart-plus"></i> Add To Cart</button>
+                        <button onClick={() => dispatch(add({ id, image, title, category, price, rating, count:1 }))} className="p-2 bg-purple-400 transition transform hover:scale-105 w-full rounded-lg font-semibold"><i className="fa fa-cart-plus"></i> Add To Cart</button>
                     )
                 }
            

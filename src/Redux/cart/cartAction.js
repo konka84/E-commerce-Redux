@@ -1,4 +1,4 @@
-import { ADD, DECREASE, REMOVE_ALL, REMOVE_FROM_CART } from "./cartActionType";
+import { ADD, DECREASE, INCREASE, REMOVE_ALL, REMOVE_FROM_CART } from "./cartActionType";
 
 export function add(products){
     return{
@@ -9,7 +9,7 @@ export function add(products){
 
 export function increase(id){
     return{
-        type: ADD,
+        type: INCREASE,
         payload: {
             id,
         }

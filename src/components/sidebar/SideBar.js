@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { ModalContext, } from "../../contexts/ShoppingContext";
-import ProdCardSidebar from "../cards/ProductCardSidebar";
+import ProductCardSidebar from "../cards/ProductCardSidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { removeAll} from "../../Redux/cart/cartAction";
 
@@ -32,7 +32,7 @@ export default function SideBar() {
                 
                 <div className="overflow-y-auto flex-grow">
                     {
-                        Object.values(cartProducts).map((product) => <ProdCardSidebar product={product} />)
+                        Object.values(cartProducts).map((product) => <ProductCardSidebar product={product} />)
                     }
                 </div>
                

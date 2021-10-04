@@ -1,15 +1,21 @@
 import { useContext,useState } from 'react';
 import { Link,useHistory } from 'react-router-dom'
-import { ModalContext, ShopContext } from '../../contexts/ShoppingContext';
+import { ModalContext  } from '../../contexts/ShoppingContext';
+import {  useSelector } from "react-redux";
+
 
 
 
 export default function Navbar() {
 
-const {cartProducts} = useContext(ShopContext);
+//const {cartProducts} = useContext(ShopContext);
 const { setCartVisible } = useContext(ModalContext);
 const [isHamMenuOpen, setIsHamMenuOpen] = useState(false);
 const history = useHistory();
+const cartProducts= useSelector( (state)=> state); // eslint-disable-line
+
+   
+
 
 const siteLogo = "https://e7.pngegg.com/pngimages/930/556/png-clipart-shopping-cart-shopping-cart-logo-online-shopping-service-shopping-cart-retail-rectangle.png";
 return (
@@ -45,7 +51,7 @@ return (
             <i className="fa fa-shopping-cart"></i>
             {
                 Object.keys(cartProducts).length ? (
-                    <p className="absolute -right-3 -top-3 text-base rounded-full px-2 bg-black text-neon1-light-300 font-semibold">{Object.values(cartProducts).reduce((totalSelected, product) => totalSelected + product.count, 0)}</p>
+                    <p className="absolute -right-3 -top-3 text-base rounded-full px-2 bg-black text-neon1-light-300 font-semibold">{Object.values(cartProducts).reduce((totalSelected, product) => totalSelected + product.count,0)}</p>
                 ) : ""
             }
         </button>

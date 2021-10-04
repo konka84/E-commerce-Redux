@@ -17,6 +17,12 @@ export default function cartReducer(state = {}, action) {
               } 
           }
         case DECREASE:
+          if (state[action.payload.id].count===1)
+          {
+            const clonedCart ={...state};
+            delete clonedCart[action.payload.id]
+            return  clonedCart;
+          }
             return {
                 ...state,
                 [action.payload.id] :{

@@ -24,7 +24,7 @@ export default function ProductCardSidebar({ product: { id, title, image, price,
                 </div>
             </div>
             <div className="flex w-full py-1">
-                <button className="bg-purple-400 fa-fa-trash transition transform hover:scale-110 w-1/4 py-0 px-2 font-semibold rounded-md" onClick={() =>{dispatch(remove({ id, title, image, price, rating: { rate }}, count ) )
+                <button className="bg-purple-400 fa-fa-trash transition transform hover:scale-110 w-1/4 py-0 px-2 font-semibold rounded-md" onClick={() =>{dispatch(remove(( id) )
                     
                 }} ><i className="fa fa-trash"></i></button>
                 <div className="flex space-x-3 justify-around flex-grow px-8 space-x-4">

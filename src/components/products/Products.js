@@ -72,7 +72,7 @@ export default function Products() {
                 </div>
                 <div className="w-screen inline-block relative 2xl:w-2/5 xl:w-2/5 md:w-2/5 sm:w-full px-2 transition transform hover:scale-105">
                     <div>
-                    <input className="w-44 bg-purple-100 py-3 px-10 w-full border border-gray-300 placeholder-gray-600 text-gray-900 rounded leading-tight focus:outline-none focus:bg-purple-100 focus:border-purple-500 transition transform hover:bg-purple-200" type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+                    <input className=" bg-purple-100 py-3 px-10 w-full border border-gray-300 placeholder-gray-600 text-gray-900 rounded leading-tight focus:outline-none focus:bg-purple-100 focus:border-purple-500 transition transform hover:bg-purple-200" type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
                     </div>
                     <div className="pointer-events-none absolute inset-y-0 left-2 flex items-center px-2 text-gray-700">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

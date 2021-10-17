@@ -24,7 +24,7 @@ export default function CheckoutPage() {
             {
                <div>
                    <Navbar/>
-                    <div className="w-3/6 md:w-1/2 mx-auto bg-white-600  rounded-md my-16 p-8">
+                    <div className="w-full md:w-1/2 mx-auto bg-white-600  rounded-md my-16 p-8">
                         <form className="flex flex-col space-y-5" onSubmit={handleSubmit}>
                             <input required className="focus:bg-white hover:scale-102 transition transform p-2 text-gray-900 placeholder-gray-500 rounded-md bg-gray-100 border border-gray-200 focus:border-gray-500 outline-none focus:outline-none" type="text" name="fname" placeholder="First Name" />
                             <input  required className="focus:bg-white hover:scale-102 transition transform p-2 text-gray-900 placeholder-gray-500 rounded-md bg-gray-100 border border-gray-200 focus:border-gray-500 outline-none focus:outline-none" type="text" name="lname" placeholder="Last Name" />
